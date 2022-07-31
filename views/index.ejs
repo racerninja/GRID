@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+	<link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+</head>
+<body>
+<header class="head">
+	
+<nav>
+	<div class="logo"> <h1 style="font-size: 20px;"> matrix - a grid project</h1> </div>
+	<div class="menu">
+		<a href="#" style="font-size: 20px">Home</a>
+		<a href="#" style="font-size: 20px">gallery</a>
+		<a href="#" style="font-size: 20px">contact</a>
+	</div>
+</nav>
+
+	<main>
+		<section>
+			
+			<h1 >WANT TO KNOW WHAT'S TRENDING ON <span class="change_content"> </span> <span style="margin-top: -10px;"></span> </h1>
+			<a href="#" class="btnone">learn more</a>
+			
+		</section>
+  </main>
+
+</header>
+<section class="product">
+  <h2 class="product-category">LATEST SNEAKERS TRENDS</h2>
+
+<div class="product-container">
+<% var i = -1%>
+<% data.forEach(function(user){ %>
+  <% i++ %>
+  <div class="product-card">
+    <a href = "/product/<%=i%>", target="_blank">
+    <div class="product-image">
+        <img src=<%= user.image_links[0]%> class="product-thumb" alt="">
+        <button class="color-btn" style = "background: rgb(<%= user.color[0]%>, <%= user.color[1]%>, <%= user.color[2]%>)" > </button>
+        <button class="price-btn"><%= user.price%> </button>
+        <button class="card-btn" onclick=" window.open('<%= user.flipkart_link%>','_blank')" >Get on Flipkart</button>
+    </div>
+    </a>
+    <div class="product-info">
+        <h2 class="product-brand"><%= user.product_brand%></h2>
+        <h2 class="product-name"><%= user.product_name%></h2>
+        
+    </div>
+</div>
+<% }); %>
+</div>
+
+</section>
+<footer>
+  <div class="footer-content">
+      <img src="img/light-logo.png" class="logo" alt="">
+      <div class="footer-ul-container">
+          <ul class="category">
+              <li class="category-title">men</li>
+              <li><a href="#" class="footer-link">t-shirts</a></li>
+              <li><a href="#" class="footer-link">sweatshirts</a></li>
+              <li><a href="#" class="footer-link">shirts</a></li>
+              <li><a href="#" class="footer-link">jeans</a></li>
+              <li><a href="#" class="footer-link">trousers</a></li>
+              <li><a href="#" class="footer-link">shoes</a></li>
+              <li><a href="#" class="footer-link">casuals</a></li>
+              <li><a href="#" class="footer-link">formals</a></li>
+              <li><a href="#" class="footer-link">sports</a></li>
+              <li><a href="#" class="footer-link">watch</a></li>
+          </ul>
+          <ul class="category">
+              <li class="category-title">women</li>
+              <li><a href="#" class="footer-link">t-shirts</a></li>
+              <li><a href="#" class="footer-link">sweatshirts</a></li>
+              <li><a href="#" class="footer-link">shirts</a></li>
+              <li><a href="#" class="footer-link">jeans</a></li>
+              <li><a href="#" class="footer-link">trousers</a></li>
+              <li><a href="#" class="footer-link">shoes</a></li>
+              <li><a href="#" class="footer-link">casuals</a></li>
+              <li><a href="#" class="footer-link">formals</a></li>
+              <li><a href="#" class="footer-link">sports</a></li>
+              <li><a href="#" class="footer-link">watch</a></li>
+          </ul>
+      </div>
+  </div>
+</footer>
+</body>
+</html>

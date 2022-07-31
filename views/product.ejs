@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+	
+</head>
+<body>
+    <header>     
+        <nav class="nav-product">
+            <div class="logo-product"> <h1 style="font-size: 20px;"> matrix - a grid project</h1> </div>
+            <div class="menu-product">
+                <a href="#" style="font-size: 20px">Home</a>
+                <a href="#" style="font-size: 20px">gallery</a>
+                <a href="#" style="font-size: 20px">contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section section class="product-details">
+        <div class="image-slider">
+            <img src="<%= data[id.id].image_links[0]%>" class="p-image">
+            <img src="<%= data[id.id].image_links[1]%>" class="p-image2">
+            <img src="<%= data[id.id].image_links[2]%>" class="p-image2">
+            <img src="<%= data[id.id].image_links[3]%>" class="p-image2">
+            <img src="<%= data[id.id].image_links[4]%>" class="p-image2">
+
+        </div>
+        <div class="details">
+             <h2 class="p-brand"><%= data[id.id].product_brand%></h2>
+             <h2 class="p-name"><%= data[id.id].product_name%></h2>
+             <span class="p-price"><%= data[id.id].price%></span>
+             <button class="product-card-btn" onclick=" window.open('<%= data[id.id].flipkart_link%>','_blank')"> Get On Flipkart</button>
+             <p class="p-des"><%= data[id.id].product_des%></p>
+        </div>
+    </section>
+
+    <section section class = "insta">
+        <h2 class="rtoi"> #Related Trends On Instagram</h2>
+        <div class="insta-grid">
+            
+            <img src="<%= data[id.id].insta_links[0]%>" class="p-image">
+            <img src="<%= data[id.id].insta_links[1]%>" class="p-image">
+            <img src="<%= data[id.id].insta_links[2]%>" class="p-image">
+            <img src="<%= data[id.id].insta_links[3]%>" class="p-image">
+            <img src="<%= data[id.id].insta_links[4]%>" class="p-image">
+            <img src="<%= data[id.id].insta_links[5]%>"  class="p-image">
+ 
+        </div>
+    </section>
+</body>
+</html>
